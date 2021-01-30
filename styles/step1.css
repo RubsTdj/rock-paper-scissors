@@ -1,0 +1,58 @@
+/*==========
+   STEP 1
+===========*/
+
+/* .step1{
+    display: none;
+} */
+
+.game .step1 {
+    background: url(/images/bg-triangle.svg) no-repeat center;
+}
+
+.game .step1 img{
+    width: 60px;
+}
+
+.game .step1 .design-circle{
+    width: 190px;
+    height: 190px;
+    background: white;
+    border-radius: 50%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: .3s ease-in-out;
+
+    cursor: pointer;
+}
+
+.game .step1 .paper {margin-right: 70px;}
+
+.game .step1 .rock { margin: 30px auto 0;}
+
+
+/*================
+   Media queries
+=================*/
+
+@media screen and (max-width: 615px) {
+
+    .game .step1 .design-circle {
+        width: 160px;  
+        height: 160px;
+    }
+
+}
+
+@media screen and (max-width: 440px) {
+
+    .game .step1 .design-circle {
+        width: 150px;  
+        height: 150px;
+    }
+ 
+}
+

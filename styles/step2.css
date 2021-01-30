@@ -1,0 +1,79 @@
+/*==========
+   STEP 2 
+===========*/
+
+.step2 {
+    display: none;
+}
+
+/* .step2 .player {margin-right: 100px;} */
+/* .step2 .computer h2 {margin-bottom: 100px;} */
+
+.step2 .computer .design-circle-shadow {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    background: rgb(19, 28, 53);
+    opacity: 0.7;
+}
+
+
+.step2 .play-again {
+    margin: auto 75px;
+}
+
+
+.step2 .play-again h2{
+    font-size: 50px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.step2 .play-again h2.lose{display: none;}
+
+.step2 .play-again h2.win{display: none;}
+
+.step2 .play-again .btn-play{
+    width: 215px;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color:hsl(237, 49%, 15%);
+    padding: 15px 0;
+    border-radius: 10px;
+    border: none;
+    background-color: #fff;
+    outline-style: none;
+    cursor: pointer;
+    display: none;
+}
+
+.step2 .play-again .btn-play:hover {
+    color:red;
+}
+
+
+/*================
+   Media queries
+=================*/
+
+@media screen and (max-width: 1030px) {
+
+    .step2 .play-again {
+        order: 1;
+        margin: 30px 100% 0;
+    }
+    
+}
+
+@media screen and (max-width: 440px) {
+
+    .step2 .computer .design-circle-shadow {
+        width: 130px;
+        height: 130px;
+        margin-left: 10px;
+    }
+    
+}

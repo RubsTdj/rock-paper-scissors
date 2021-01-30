@@ -1,0 +1,252 @@
+/* ==================
+    DESKTOP FIRST 
+=====================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap');
+
+:root {
+    --background: linear-gradient(to bottom, hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+
+    --darkText: hsl(229, 25%, 31%);
+    --scoreText: hsl(229, 64%, 46%);
+    --headerOutline: hsl(217, 16%, 45%);
+
+    --scissorsColor: hsl(40, 84%, 53%);
+    /* --scissorsColor: linear-gradient(to left, hsl(39, 89%, 49%), hsl(40, 84%, 53%)); */
+    --paperColor: hsl(230, 89%, 62%);
+    /* --paperColor: linear-gradient(to left,hsl(230, 89%, 62%), hsl(230, 89%, 65%)); */
+    --rockColor: hsl(349, 70%, 56%);
+    /* --rockColor: linear-gradient(to left, hsl(349, 71%, 52%), hsl(349, 70%, 56%)); */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: var(--background);
+    height: 100vh;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    text-transform: uppercase;
+}
+
+.container {
+    max-width: 1366px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 40px 0 0;
+}
+
+/*==========
+   HEADER 
+===========*/
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 70%;
+    border: 2px solid var(--headerOutline);
+    border-radius: 10px;
+    padding: 20px 30px;
+    margin: 0 auto 70px;
+}
+
+header .title {
+    color: white;
+    font-size: 35px;
+    letter-spacing: 1.5px;
+    line-height: 28px;
+}
+
+header .score {
+    width: 150px;
+    height: 110px;
+    background-color: #fff;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--scoreText);
+}
+
+header .score .number {
+    color: var(--darkText);
+    font-size: 50px;
+}
+
+
+/*==========
+    MAIN 
+===========*/
+
+h2 {
+    color: white;
+    font-size: 25px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-align: center;
+    margin-bottom: 60px;
+
+}
+
+.btn-rules {
+    width: 125px;
+    background:hsl(237, 49%, 15%);
+    color: white;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: 16px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 10px 0;
+    position: absolute;
+    bottom: 20px; right: 20px;
+
+    cursor: pointer;
+}
+
+.versus{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.design-versus{
+    width: 290px;
+    height: 290px;
+    background: white;
+    border-radius: 50%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+    transition: .4s linear;
+}
+
+.design-versus img {
+    width: 90px;
+}
+
+.img-rules {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.img-rules img{
+    width: 400px;
+    background-color: rgb(1, 3, 77);
+    opacity: .9;
+    padding: 40px;
+    border-radius: 20px;
+}
+
+/*===============================
+  Design Rock - Paper - Scissors 
+================================*/
+
+.rock {
+    border: 20px solid var(--rockColor);
+    box-shadow: inset 0px 10px 2px hsl(41, 15%, 80%), 0px 8px 2px hsl(349, 69%, 43%);
+}
+
+.paper {
+    border: 20px solid var(--paperColor);
+    box-shadow: inset 0px 10px 2px hsl(41, 15%, 80%), 0px 8px 2px hsl(230, 66%, 37%);
+}
+
+.scissors {
+    border: 20px solid var(--scissorsColor);
+    box-shadow: inset 0px 10px 2px hsl(41, 15%, 80%), 0px 8px 2px hsl(39, 89%, 38%);
+}
+
+/*==========
+   FOOTER 
+==========*/
+.attribution {
+    font-size: 11px;
+    position: absolute;
+    bottom: 20px; left: 20px;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+
+
+
+/*================
+   Media queries
+=================*/
+
+@media screen and (max-width: 1030px) {
+
+    .design-versus {
+        width: 228px;
+        height: 228px;
+        margin: 0 40px 30px;
+
+    }
+    
+    .versus{
+        flex-wrap: wrap;
+    }
+    
+}
+
+@media screen and (max-width: 615px) {
+    header {
+        width: 425px;
+        margin-bottom: 90px;
+    }
+
+    header .score {
+        width: 100px;
+        height: 90px;
+    }  
+
+    .design-versus {
+        width: 200px;
+        height: 200px;
+        margin: 0 10px;
+    }
+
+    .design-versus img {
+        width: 60px;
+    }
+
+}
+
+
+@media screen and (max-width: 440px) {
+    header {
+        width: 385px;
+        margin-bottom: 70px;
+    }
+
+    .design-versus {
+        width: 180px;
+        height: 180px;
+        margin: 0 5px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+}
+
+@media screen and (max-width: 400px) {
+    .design-versus {
+        width: 175px;
+        height: 175px;
+    }
+}
